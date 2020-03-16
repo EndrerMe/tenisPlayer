@@ -59,6 +59,10 @@ export class ModelService {
                     o.visible = false;
                 }
 
+                if (o.name.match(/.*Shorts.*/) && o.name !== 'Girl_Shorts_01') {
+                    o.visible = false;
+                }
+
                 if (o.name.match(/.*Shoes.*/) && o.name !== 'Girl_Shoes_02') {
                     o.visible = false;
                 }
