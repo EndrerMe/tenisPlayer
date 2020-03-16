@@ -1,0 +1,13 @@
+<div class="changeShirt" *ngIf='clothes'>
+    <div class="shirt" *ngFor='let shirt of clothes.shirts' (click)='changeShirt(shirt.shirt)'>
+        <img [src]='shirt.shirtIcon' alt="shirt">
+    </div>
+    <div class="short" *ngFor='let short of clothes.shorts' (click)='changeShort(short.short)'>
+        <img [src]='short.shortIcon' alt="">
+    </div>
+    <div class="hair" [style.background]='currentHairColor' (click)='toggleHairPicker()'>
+        <div class="hairPicler" *ngIf='isShowHairPicker'>
+            <span *ngFor='let hair of clothes.hair' [style.background]='hair.color' (click)='changeHair(hair)'></span>
+        </div>
+    </div>
+</div>
